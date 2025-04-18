@@ -1,8 +1,22 @@
-<mat-card *ngIf="product">
-    <mat-card-title>{{ product.name }}</mat-card-title>
-    <mat-card-subtitle>${{ product.price.toFixed(2) }}</mat-card-subtitle>
-    <mat-card-content>
-      <p>{{ product.description }}</p>
-    </mat-card-content>
-  </mat-card>
+<div class="product-detail-container" *ngIf="product">
+    <mat-card class="product-detail-card">
+      <img mat-card-image [src]="product.imageUrl" alt="{{ product.name }}" />
+      <mat-card-content>
+        <h2>{{ product.name }}</h2>
+        <h3>${{ product.price.toFixed(2) }}</h3>
+        <p>{{ product.description }}</p>
+      </mat-card-content>
+      <mat-card-actions class="actions">
+        <button mat-stroked-button color="primary" routerLink="/products">
+          <mat-icon>arrow_back</mat-icon> Back
+        </button>
+        <button mat-raised-button color="accent">
+          <mat-icon>add_shopping_cart</mat-icon> Add to Cart
+        </button>
+        <button mat-flat-button color="warn">
+          <mat-icon>shopping_bag</mat-icon> Buy Now
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
   
