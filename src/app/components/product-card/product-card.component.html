@@ -6,7 +6,15 @@
       <p>{{ product.description }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" (click)="onSelect()">View Details</button>
+      <button mat-stroked-button color="primary" (click)="onSelect()">
+        <mat-icon>info</mat-icon> View Details
+      </button>
+      <button mat-raised-button color="accent">
+        <mat-icon>add_shopping_cart</mat-icon> Add to Cart
+      </button>
+      <button mat-flat-button color="warn">
+        <mat-icon>shopping_bag</mat-icon> Buy Now
+      </button>
     </mat-card-actions>
   </mat-card>
   
