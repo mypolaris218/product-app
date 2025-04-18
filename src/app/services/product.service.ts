@@ -2,12 +2,26 @@ import { Injectable } from '@angular/core';
 import { Product } from '../models/product.model';
 import { Observable, of } from 'rxjs';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root'
+})
 export class ProductService {
   private products: Product[] = [
-    { id: 1, name: 'Phone', price: 699, description: 'A smart phone' },
-    { id: 2, name: 'Laptop', price: 1299, description: 'A powerful laptop' }
-  ];
+    {
+      id: 1,
+      name: 'Phone',
+      price: 699,
+      description: 'A smart phone',
+      imageUrl: 'https://picsum.photos/300/200?random=1'
+    },
+    {
+      id: 2,
+      name: 'Laptop',
+      price: 1299,
+      description: 'A powerful laptop',
+      imageUrl: 'https://picsum.photos/300/200?random=2'
+    }
+  ];  
 
   getProducts(): Observable<Product[]> {
     return of(this.products);

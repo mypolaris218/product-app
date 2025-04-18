@@ -1,1 +1,8 @@
-<p>product-detail works!</p>
+<mat-card *ngIf="product">
+    <mat-card-title>{{ product.name }}</mat-card-title>
+    <mat-card-subtitle>${{ product.price.toFixed(2) }}</mat-card-subtitle>
+    <mat-card-content>
+      <p>{{ product.description }}</p>
+    </mat-card-content>
+  </mat-card>
+  
